@@ -2,3 +2,7 @@
     font-family: Arial, sans-serif;
     font-size: 18px;
 }
+.meniu a {
+    color: #00008B; /* Albastru închis pentru text */
+    text-decoration: none;
+}
