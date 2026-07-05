@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Util cu Video Funcțional</title>
+    <style>
+        /* Elimină marginile paginii */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            background-color: #800020; /* Culoare de rezervă (burgundy) dacă video nu se încarcă */
+        }
+
+        /* Containerul pentru video de fundal */
+        .video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100; /* Trimite video-ul în spatele meniurilor */
+            object-fit: cover;
+        }
+
+        /* Containerul pentru meniurile interactive */
+        .content-overlay {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Stilul meniurilor interactive */
+        details {
+            background-color: rgba(143, 188, 143, 0.9); /* Adăugat opacitate (0.9) ca să fie ușor transparent */
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 160px;
+        }
+
+        details summary {
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        details ul {
+            list-style: none;
+            padding-left: 5px;
+            margin: 10px 0 0 0;
+        }
+
+        details ul li {
+            margin-bottom: 8px;
+        }
+
+        details ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- AICI AM MODIFICAT: Am pus un link video real (un clip mp4 cu nori/munte din sursă publică) -->
+<video autoplay muted loop playsinline class="video-background">
+    <source src="Capela de medici e faina" type="video/mp4">
+    Browserul tău nu suportă video.
+</video>
+    <!-- Meniurile tale interactive -->
+    <div class="content-overlay">
+        <details>
+            <summary>Conturi</summary>
+            <ul>
+                <li><a href="https://office.com" target="_blank" onclick="this.closest('details').open=false;">Office 365</a></li>
+                <li><a href="https://google.com" target="_blank" onclick="this.closest('details').open=false;">Gmail</a></li>
+                <li><a href="https://facebook.com" target="_blank" onclick="this.closest('details').open=false;">Facebook</a></li>
+                <li><a href="https://whatsapp.com" target="_blank" onclick="this.closest('details').open=false;">Whatsapp</a></li>
+                <li><a href="https://linkedin.com" target="_blank" onclick="this.closest('details').open=false;">LinkedIn</a></li>
+                <li><a href="https://instagram.com" target="_blank" onclick="this.closest('details').open=false;">Instagram</a></li>
+                <li><a href="https://pinterest.com" target="_blank" onclick="this.closest('details').open=false;">Pinterest</a></li>
+                <li><a href="https://ejobs.ro" target="_blank" onclick="this.closest('details').open=false;">eJobs</a></li>
+                <li><a href="https://bestjobs.eu" target="_blank" onclick="this.closest('details').open=false;">BestJobs</a></li>
+                <li><a href="https://github.io" target="_blank" onclick="this.closest('details').open=false;">Github</a></li>
+            </ul>  
+        </details>
+
+        <details>
+            <summary>Stiri</summary>
+            <ul>
+                <li><a href="http://stiripesurse.ro" target="_blank" onclick="this.closest('details').open=false;">Stiri pe surse</a></li>
+                <li><a href="https://g4media.ro" target="_blank" onclick="this.closest('details').open=false;">G4media</a></li>
+                <li><a href="https://catavencii.ro" target="_blank" onclick="this.closest('details').open=false;">Catavencii</a></li>
+                <li><a href="https://realitatea.net" target="_blank" onclick="this.closest('details').open=false;">Realitatea</a></li>
+                <li><a href="https://mediafax.ro" target="_blank" onclick="this.closest('details').open=false;">Mediafax</a></li>
+                <li><a href="https://biziday.ro" target="_blank" onclick="this.closest('details').open=false;">Biziday</a></li>
+                <li><a href="https://rasunetul.ro" target="_blank" onclick="this.closest('details').open=false;">Rasunetul</a></li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Comert</summary>
+            <ul>
+                <li><a href="https://olx.ro" target="_blank" onclick="this.closest('details').open=false;">Olx</a></li>
+                <li><a href="https://emag.ro" target="_blank" onclick="this.closest('details').open=false;">Emag</a></li>
+                <li><a href="https://aliexpress.com" target="_blank" onclick="this.closest('details').open=false;">Aliexpress</a></li>
+                <li><a href="http://ebay.com" target="_blank" onclick="this.closest('details').open=false;">Ebay</a></li>
+                <li><a href="http://temu.com" target="_blank" onclick="this.closest('details').open=false;">Temu</a></li>
+                <li><a href="https://banggood.com" target="_blank" onclick="this.closest('details').open=false;">Banggood</a></li>
+                <li><a href="https://trendyol.com" target="_blank" onclick="this.closest('details').open=false;">Trendyol</a></li>
+                <li><a href="https://vinted.ro" target="_blank" onclick="this.closest('details').open=false;">Vinted</a></li>
+                <li><a href="https://ghiseul.ro" target="_blank" onclick="this.closest('details').open=false;">Ghiseul ro</a></li>
+                <li><a href="https://sameday.ro" target="_blank" onclick="this.closest('details').open=false;">Samedey</a></li>        
+                <li><a href="https://eawb.ro" target="_blank" onclick="this.closest('details').open=false;">Eawb</a></li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Turism</summary>
+            <ul>
+                <li><a href="https://booking.com" target="_blank" onclick="this.closest('details').open=false;">Booking</a></li> 	
+                <li><a href="https://google.ro" target="_blank" onclick="this.closest('details').open=false;">Traducere</a></li> 
+                <li><a href="https://distanta.ro" target="_blank" onclick="this.closest('details').open=false;">Distante rutiere</a></li>
+                <li><a href="https://wizzair.com" target="_blank" onclick="this.closest('details').open=false;">Wizzair</a></li>
+                <li><a href="https://google.ro" target="_blank" onclick="this.closest('details').open=false;">Google map</a></li>
+            </ul>
+        </details>
+    </div>
+
+</body>
+</html>
